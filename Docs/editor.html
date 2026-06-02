@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        
+        <div class="navbar">
+            <button id="btn-bold"><b>B</b></button>
+            <button id="btn-italic"><i>I</i></button>
+            <button id="btn-under"><u>U</u></button>
+            <input id="inp-color" type="color">
+            <input id="inp-font" type="text" placeholder="Arial">
+        </div>
+
+        <div class="main-container">
+
+            <div id="tree" class="tree">
+                <div class="tree-node" data-id="1">
+                    <div class="treeitem">
+                        <span class="node-text">Main</span>
+                        <button class="btn-add">+</button>
+                    </div>
+                    <div class="tree-children"></div>
+                </div>
+            </div>
+            
+            <div class="editor" id="page" contenteditable="true">
+                Start editing
+            </div>
+
+        </div>
+        
+        <script src="script.js" async defer></script>
+    </body>
+</html>
