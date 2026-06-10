@@ -64,7 +64,7 @@ function updateInputStates() {
     const el = sel.anchorNode?.parentElement;
     if (!el || !page.contains(el)) return;
     const style = window.getComputedStyle(el);
-    if (sel.isCollapsed) inp_font.value = style.fontFamily.replace(/['"]/g, "");
+
     inp_color.value = rgbToHex(style.color);
 }
 
