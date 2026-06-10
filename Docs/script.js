@@ -57,7 +57,9 @@ function updateInputStates() {
     if (!sel.rangeCount) return;
     const el = sel.anchorNode?.parentElement;
     if (!el || !page.contains(el)) return;
-    inp_color.value = rgbToHex(window.getComputedStyle(el).color);
+    const style = window.getComputedStyle(el);
+    if (sel.isCollapsed) inp_font.value = style.fontFamily.replace(/['"]/g, "");
+    inp_color.value = rgbToHex(style.color);
 }
 
 ["keyup", "mouseup"].forEach(evt => {
