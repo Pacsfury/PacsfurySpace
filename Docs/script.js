@@ -46,6 +46,7 @@ function applyFont() {
     page.focus();
 }
 
+btn_font.addEventListener("mousedown", (e) => { e.preventDefault(); saveSelection(); });
 btn_font.addEventListener("click", applyFont);
 inp_font.addEventListener("keydown", ({ key }) => { if (key === "Enter") applyFont(); });
 
