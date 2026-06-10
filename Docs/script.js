@@ -38,11 +38,16 @@ btn_italic.addEventListener("click", () => document.execCommand("italic"));
 btn_under.addEventListener("click",  () => document.execCommand("underline"));
 inp_color.addEventListener("change", () => document.execCommand("foreColor", false, inp_color.value));
 
-inp_font.addEventListener("change", () => {
+const btn_font = document.getElementById("btn-font");
+
+function applyFont() {
     restoreSelection();
     document.execCommand("fontName", false, inp_font.value);
     page.focus();
-});
+}
+
+btn_font.addEventListener("click", applyFont);
+inp_font.addEventListener("keydown", ({ key }) => { if (key === "Enter") applyFont(); });
 
 // ── Toolbar state sync ───────────────────────────────────────────────────────
 
