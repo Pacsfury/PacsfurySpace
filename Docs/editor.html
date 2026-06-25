@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>PacsfuySpace - Documents</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="icon" href="../favico/docs.png" type="image/svg+xml">
-    </head>
-    <body>
-        
-        <div class="navbar">
-            <button id="btn-bold"><b>B</b></button>
-            <button id="btn-italic"><i>I</i></button>
-            <button id="btn-under"><u>U</u></button>
-            <input id="inp-color" type="color">
-            <input id="inp-font" type="text" placeholder="Arial">
-            <button id="btn-font">+</button>
-        </div>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>PacsfuySpace - Editor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../favico/docs.png" type="image/svg+xml">
+</head>
+<body>
+    <div class="navbar">
+        <button id="btn-back">←</button>
+        <span id="doc-title" style="font-weight:500; font-size:0.95rem;"></span>
+        <button id="btn-bold"><b>B</b></button>
+        <button id="btn-italic"><i>I</i></button>
+        <button id="btn-under"><u>U</u></button>
+        <input id="inp-color" type="color">
+        <input id="inp-font" type="text" placeholder="Arial">
+        <button id="btn-font">+</button>
+        <button id="btn-save">💾</button>
+    </div>
 
-        <div class="main-container">
-
-            <div id="tree" class="tree">
-                <div class="tree-node" data-id="1">
-                    <div class="treeitem">
-                        <span class="node-text">Main</span>
-                        <button class="btn-add">+</button>
-                    </div>
-                    <div class="tree-children"></div>
+    <div class="main-container">
+        <div id="tree" class="tree">
+            <div class="tree-node" data-id="1">
+                <div class="treeitem">
+                    <span class="node-text">Main</span>
+                    <button class="btn-add">+</button>
                 </div>
+                <div class="tree-children"></div>
             </div>
-            
-            <div class="editor" id="page" contenteditable="true">
-                Start editing
-            </div>
-
         </div>
-        
-        <script src="script.js" async defer></script>
-    </body>
+
+        <div class="editor" id="page" contenteditable="true"></div>
+    </div>
+
+    <script src="script.js" type="module"></script>
+</body>
 </html>
