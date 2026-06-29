@@ -1,5 +1,5 @@
 # PacsfurySpace
-<sub>**version:** _alpha 0.0.1_</sub>
+<sub>**version:** _alpha 0.0.2_</sub>
 
 > A private and simple suite for your everyday use
 ---
