@@ -58,4 +58,4 @@ Contributions are what make the open-source community such an amazing place to l
 
 ## Special Thanks
 
-- [eddielin978](github.com/eddielin978) for document saving and small fixes
+- [eddielin978](https://github.com/eddielin978) for document saving and small fixes
