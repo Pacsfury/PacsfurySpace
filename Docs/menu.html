@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>PacsfuySpace - Documents</title>
+    <title>PacsfurySpace - Documents</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="../favico/docs.png" type="image/svg+xml">
@@ -19,6 +19,8 @@
             padding: 0.5rem 1.2rem;
             font-size: 0.9rem;
             cursor: pointer;
+            height: auto;
+            width: auto;
         }
         .cards-grid {
             display: grid;
@@ -74,16 +76,16 @@
         .empty-state {
             grid-column: 1 / -1;
             text-align: center;
-            color: #999;
+            color: #777;
             padding: 4rem 0;
-            font-size: 0.95rem;
+            font-size: 1.2rem;
         }
     </style>
 </head>
 <body>
     <div class="menu-header">
-        <h1>PacsfuySpace</h1>
-        <button class="btn-new" id="btn-new">+ New document</button>
+        <h1>PacsfurySpace</h1>
+        <button type="button" class="btn-new" id="btn-new">New document</button>
     </div>
     <div class="cards-grid" id="cards-grid"></div>
 
@@ -111,13 +113,12 @@
                     <div class="card-footer">
                         <span class="card-title" title="${escHtml(doc.title)}">${escHtml(doc.title)}</span>
                         <div class="card-actions">
-                            <button class="btn-rename" title="Rename">✏️</button>
-                            <button class="btn-delete" title="Delete">🗑️</button>
+                            <button type="button" class="btn-rename" title="Rename">✏️</button>
+                            <button type="button" class="btn-delete" title="Delete">🗑️</button>
                         </div>
                     </div>`;
 
-                card.querySelector(".card-preview").addEventListener("click", () => open(doc.id));
-                card.querySelector(".card-title").addEventListener("click",   () => open(doc.id));
+                card.addEventListener("click", () => open(doc.id));
 
                 card.querySelector(".btn-rename").addEventListener("click", async (e) => {
                     e.stopPropagation();
