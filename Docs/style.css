@@ -10,7 +10,8 @@ button, input[type="color"], input[type="text"] {
     margin: 0;
 }
 
-button, input[type="color"]  {
+/* Only target icons or inputs with a 30x30 square shape */
+input[type="color"] {
     border: none;
     outline: none;
     cursor: pointer;
@@ -19,6 +20,21 @@ button, input[type="color"]  {
     background-color: #69d4a8;
     border-radius: 4px;
     transition: all 0.2s ease-in-out;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #69d4a8;
+    border-radius: 4px;
+    transition: all 0.2s ease-in-out;
+    min-height: 30px; 
+    min-width: 30px;  
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
 }
 
 input[type="text"] {
