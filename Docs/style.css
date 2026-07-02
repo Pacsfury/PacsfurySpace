@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    margin-left: 34px; 
+    margin: 1rem 0 0 2rem;
 }
 
 button, input[type="color"], input[type="text"] {

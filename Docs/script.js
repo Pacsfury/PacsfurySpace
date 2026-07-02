@@ -13,6 +13,7 @@ const inp_font   = document.getElementById("inp-font");
 const page       = document.getElementById("page");
 const tree       = document.getElementById("tree");
 const docTitle   = document.getElementById("doc-title");
+const saveState  = document.getElementById("save-state")
 
 // ── State ─────────────────────────────────────────────────────────────────────
 
@@ -78,8 +79,12 @@ function scheduleAutoSave() {
 }
 
 function flashSave() {
-    btn_save.textContent = "✓ Saved";
-    setTimeout(() => btn_save.textContent = "💾 Save", 1500);
+    btn_save.textContent = "✓";
+    saveState.textContent = "Saved";
+    setTimeout(() => {
+      btn_save.textContent = "💾";
+      saveState.textContent = "Save";
+    }, 1500);
 }
 
 // ── Tree serialization ────────────────────────────────────────────────────────
